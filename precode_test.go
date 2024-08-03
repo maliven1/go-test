@@ -43,5 +43,6 @@ func TestMainHandlerWhenCityNotMoscow(t *testing.T) {
 	//добавить проверку по городу. завершить работу
 
 	require.Equal(t, status, http.StatusBadRequest)
+	assert.Equal(t, "wrong city value", responseRecorder.Body.String())
 
 }
