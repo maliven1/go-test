@@ -20,7 +20,6 @@ func TestMainHandlerWhenCountMoreThanTotal(t *testing.T) {
 	handler.ServeHTTP(responseRecorder, req)
 
 	status := responseRecorder.Code
-	//добавить проверку по городу. завершить работу
 
 	assert.Equal(t, status, http.StatusOK)
 
